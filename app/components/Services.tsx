@@ -1,9 +1,10 @@
 "use client";
 
+import React from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { Scissors, Wind, Leaf, Trash2, Wrench, Crop, Package, Droplets } from "lucide-react";
 
-const services = [
+const services: { icon: React.ElementType; title: string; desc: string; badge?: string }[] = [
   {
     icon: Scissors,
     title: "Lawn Mowing",
@@ -41,8 +42,9 @@ const services = [
   },
   {
     icon: Droplets,
-    title: "Trash Can Cleaning",
-    desc: "Professional pressure washing for residential trash cans to remove dirt, grime, stains, and odors — leaving them fresh and clean.",
+    title: "Trash Can Pressure Washing",
+    desc: "Keep your trash cans looking and smelling fresh with professional pressure washing. We remove built-up dirt, grime, stains, and odors to leave your bins clean and refreshed.",
+    badge: "Popular Add-On Service",
   },
 ];
 
@@ -75,12 +77,17 @@ export default function Services() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 stagger" role="list">
-          {services.map(({ icon: Icon, title, desc }) => (
+          {services.map(({ icon: Icon, title, desc, badge }) => (
             <div
               key={title}
               role="listitem"
               className="animate-on-scroll group relative glass border border-brand-border rounded-2xl p-6 hover:border-brand-green/40 hover:bg-brand-green/[0.03] transition-all duration-300 cursor-default bg-card-gradient"
             >
+              {badge && (
+                <span className="absolute top-4 right-4 text-[10px] font-bold tracking-wide text-brand-green bg-brand-green/10 border border-brand-green/20 rounded-full px-2.5 py-0.5">
+                  {badge}
+                </span>
+              )}
               <div className="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4 group-hover:bg-brand-green/20 transition-colors duration-300">
                 <Icon size={18} className="text-brand-green" aria-hidden="true" />
               </div>

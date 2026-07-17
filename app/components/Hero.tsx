@@ -70,14 +70,23 @@ export default function Hero() {
             </div>
 
             {/* Trust micro-copy */}
-            <div className="hero-animate opacity-0 flex items-center justify-center lg:justify-start gap-6 mt-8">
+            <div className="hero-animate opacity-0 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 mt-8">
               {["Free Quotes", "No Contracts", "Satisfaction Guaranteed"].map((badge) => (
                 <div key={badge} className="flex items-center gap-1.5 text-xs text-gray-500">
                   <span className="text-brand-green font-bold">✓</span>
                   {badge}
                 </div>
               ))}
+              <div className="flex items-center gap-1.5 text-xs text-gray-500">
+                <span className="text-brand-green font-bold">📍</span>
+                Hunningdon Lakes
+              </div>
             </div>
+
+            {/* Service area */}
+            <p className="hero-animate opacity-0 text-xs text-gray-600 mt-4 text-center lg:text-left leading-relaxed max-w-md mx-auto lg:mx-0">
+              Proudly serving the Hunningdon Lakes community with dependable, affordable lawn care and outdoor services.
+            </p>
           </div>
 
           {/* Photo side */}

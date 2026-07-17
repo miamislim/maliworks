@@ -21,6 +21,7 @@ const services = [
   "Weed Eating",
   "Yard Cleanup",
   "Leaf Removal",
+  "Trash Can Pressure Washing",
   "Garage Cleanup",
   "Odd Jobs",
   "Multiple Services",
@@ -114,6 +115,9 @@ export default function ContactForm() {
           </h2>
           <p className="animate-on-scroll text-gray-400 max-w-md mx-auto">
             Fill out the form below and Mali will reach out within 24 hours to confirm your service.
+          </p>
+          <p className="animate-on-scroll text-xs text-gray-600 mt-3">
+            Currently serving homeowners throughout <span className="text-gray-500 font-medium">Hunningdon Lakes</span>.
           </p>
         </div>
 

@@ -53,6 +53,9 @@ export default function About() {
               <p>
                 He&apos;s <span className="text-white font-medium">dependable, respectful, and genuinely cares</span> about the quality of his work. When you hire MaliWorks, you&apos;re not just getting a cleaner yard — you&apos;re supporting a young entrepreneur who&apos;s building something real, one lawn at a time.
               </p>
+              <p className="text-sm text-gray-500">
+                Currently serving homeowners throughout <span className="text-gray-400 font-medium">Hunningdon Lakes</span>.
+              </p>
             </div>
 
             {/* Qualities */}
@@ -61,7 +64,7 @@ export default function About() {
                 { label: "Shows up on time", sub: "Every single time." },
                 { label: "Quality-focused", sub: "Details actually matter." },
                 { label: "Respectful", sub: "To you and your property." },
-                { label: "Community-driven", sub: "Proudly local." },
+                { label: "Community-driven", sub: "Serving Hunningdon Lakes." },
               ].map(({ label, sub }) => (
                 <div
                   key={label}
