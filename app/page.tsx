@@ -4,6 +4,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import ContactForm from "./components/ContactForm";
 import Reviews from "./components/Reviews";
+import Payment from "./components/Payment";
 import Footer from "./components/Footer";
 
 // Gallery is intentionally hidden until before/after photos are ready.
@@ -29,6 +30,7 @@ export default function Home() {
 
       <ContactForm />
       <Reviews />
+      <Payment />
       <Footer />
     </main>
   );
