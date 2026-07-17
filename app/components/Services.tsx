@@ -1,7 +1,7 @@
 "use client";
 
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { Scissors, Wind, Leaf, Trash2, Wrench, Crop, Package } from "lucide-react";
+import { Scissors, Wind, Leaf, Trash2, Wrench, Crop, Package, Droplets } from "lucide-react";
 
 const services = [
   {
@@ -38,6 +38,11 @@ const services = [
     icon: Wrench,
     title: "Odd Jobs",
     desc: "Light hauling, general tidying, and other outdoor tasks — just ask.",
+  },
+  {
+    icon: Droplets,
+    title: "Trash Can Cleaning",
+    desc: "Professional pressure washing for residential trash cans to remove dirt, grime, stains, and odors — leaving them fresh and clean.",
   },
 ];
 
