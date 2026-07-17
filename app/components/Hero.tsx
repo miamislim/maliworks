@@ -91,7 +91,18 @@ export default function Hero() {
 
           {/* Photo side */}
           <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end">
-            <div className="relative w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-3xl overflow-hidden">
+            {/* Branded background glow — sibling of overflow-hidden container so it isn't clipped */}
+            <div
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full pointer-events-none"
+              style={{
+                background: "radial-gradient(ellipse at center, rgba(1,240,16,0.18) 0%, rgba(1,240,16,0.06) 45%, transparent 75%)",
+                filter: "blur(48px)",
+              }}
+              aria-hidden="true"
+            />
+            <div className="relative w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-3xl overflow-hidden"
+              style={{ boxShadow: "0 24px 64px rgba(1,240,16,0.07), 0 8px 24px rgba(0,0,0,0.4)" }}
+            >
               <Image
                 src="/images/mali-photo.png"
                 alt="Malachi, founder of MaliWorks lawn care"
