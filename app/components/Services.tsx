@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { Scissors, Droplets, Dog, Check } from "lucide-react";
+import { Scissors, Droplets, Dog, Check, Wrench } from "lucide-react";
 
 const services: {
   icon: React.ElementType;
@@ -10,6 +10,7 @@ const services: {
   desc: string;
   items: string[];
   badge?: string;
+  note?: string;
 }[] = [
   {
     icon: Scissors,
@@ -35,6 +36,21 @@ const services: {
       "Flexible scheduling",
     ],
   },
+  {
+    icon: Wrench,
+    title: "Odd Jobs",
+    desc: "Need something done around the yard or home? If it needs doing, Mali can probably help.",
+    items: [
+      "Weed pulling",
+      "Leaf cleanup",
+      "Patio furniture moving",
+      "Sweeping",
+      "Small yard cleanup",
+      "Bringing trash cans in",
+      "Minor neighborhood tasks",
+    ],
+    note: "Don't see what you need? Just ask.",
+  },
 ];
 
 export default function Services() {
@@ -52,16 +68,16 @@ export default function Services() {
             Services Built for{" "}
             <span className="gradient-text">Your Home</span>
           </h2>
-          <p className="animate-on-scroll text-gray-500 max-w-lg mx-auto leading-relaxed">
-            From lawn care to dog walking — all handled by a reliable neighbor who takes pride in every job.
+          <p className="animate-on-scroll text-gray-500 max-w-xl mx-auto leading-relaxed">
+            Mali helps with a wide range of household and neighborhood tasks — from regular yard work to the small jobs that just pile up. If it needs doing, chances are Mali can help.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-6 stagger">
-          {services.map(({ icon: Icon, title, desc, items, badge }) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger">
+          {services.map(({ icon: Icon, title, desc, items, badge, note }) => (
             <div
               key={title}
-              className="animate-on-scroll relative bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="animate-on-scroll relative bg-white rounded-3xl p-7 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col"
             >
               {badge && (
                 <span className="absolute top-5 right-5 text-[10px] font-bold tracking-wide text-green-700 bg-brand-green/10 border border-brand-green/20 rounded-full px-2.5 py-0.5">
@@ -73,7 +89,7 @@ export default function Services() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
               <p className="text-sm text-gray-500 leading-relaxed mb-6">{desc}</p>
-              <ul className="space-y-2.5">
+              <ul className="space-y-2.5 flex-1">
                 {items.map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-sm text-gray-600">
                     <Check size={14} className="text-green-600 flex-shrink-0" aria-hidden="true" />
@@ -81,16 +97,14 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              {note && (
+                <p className="text-xs text-green-700 font-medium mt-5 pt-4 border-t border-gray-100">
+                  {note}
+                </p>
+              )}
             </div>
           ))}
         </div>
-
-        <p className="text-center text-sm text-gray-400 mt-10">
-          Don&apos;t see what you need?{" "}
-          <a href="#contact" className="text-green-700 font-semibold hover:underline underline-offset-4">
-            Ask Mali directly →
-          </a>
-        </p>
       </div>
     </section>
   );

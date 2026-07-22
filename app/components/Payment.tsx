@@ -4,7 +4,7 @@ const CASHAPP_URL = "https://cash.app/$makingcashhh1";
 
 export default function Payment() {
   return (
-    <section className="py-24 lg:py-32 bg-brand-charcoal relative">
+    <section className="py-24 lg:py-32 bg-black relative">
       <div
         className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-green/30 to-transparent pointer-events-none"
         aria-hidden="true"
@@ -63,6 +63,10 @@ export default function Payment() {
           </p>
         </div>
       </div>
+
+      <p className="text-center text-xs text-gray-600 mt-16">
+        © {new Date().getFullYear()} MaliWorks · Copperstone, Virginia Beach · (757) 777-6058
+      </p>
     </section>
   );
 }

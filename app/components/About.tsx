@@ -14,28 +14,12 @@ export default function About() {
           {/* Photo */}
           <div className="animate-on-scroll relative flex justify-center lg:justify-start">
             <div className="relative">
-              {/* Branded glow — sibling of overflow-hidden container */}
-              <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] rounded-full pointer-events-none"
-                style={{
-                  background:
-                    "radial-gradient(ellipse at center, rgba(1,240,16,0.15) 0%, rgba(1,240,16,0.05) 50%, transparent 75%)",
-                  filter: "blur(52px)",
-                }}
-                aria-hidden="true"
-              />
-              <div
-                className="relative w-72 sm:w-80 lg:w-[360px] aspect-[3/4] rounded-3xl overflow-hidden"
-                style={{
-                  boxShadow:
-                    "0 24px 64px rgba(1,240,16,0.08), 0 8px 24px rgba(0,0,0,0.10)",
-                }}
-              >
+              <div className="relative w-72 sm:w-80 lg:w-[360px] aspect-[3/4]">
                 <Image
                   src="/images/mali-photo-2.png"
                   alt="Malachi, founder of MaliWorks"
                   fill
-                  className="object-cover object-top"
+                  className="object-contain object-top"
                   sizes="(max-width: 640px) 288px, (max-width: 1024px) 320px, 360px"
                 />
               </div>
@@ -59,7 +43,7 @@ export default function About() {
 
             <div className="animate-on-scroll space-y-4 text-gray-500 leading-relaxed">
               <p>
-                I&apos;m proud to serve my neighbors here in Copperstone by helping families keep their homes looking their best. Whether it&apos;s mowing your lawn, cleaning trash cans, or walking your dog, I believe every job deserves hard work, reliability, and attention to detail.
+                I&apos;m proud to serve my neighbors here in Copperstone by helping families with the tasks that pile up around the home and yard. No job is too small — if it needs doing, I&apos;m happy to help. I believe every job deserves hard work, reliability, and real attention to detail.
               </p>
               <p>
                 When you hire me, you&apos;re supporting a{" "}

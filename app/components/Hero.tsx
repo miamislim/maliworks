@@ -55,7 +55,7 @@ export default function Hero() {
 
             {/* Sub */}
             <p className="hero-animate opacity-0 text-lg text-gray-500 leading-relaxed mb-9 max-w-md mx-auto lg:mx-0">
-              Proudly serving Copperstone with dependable lawn mowing, trash can cleaning, and dog walking.
+              Proudly serving Copperstone with dependable help for your home, yard, and neighborhood — from lawn care to odd jobs and more.
             </p>
 
             {/* CTAs */}
@@ -89,28 +89,12 @@ export default function Hero() {
 
           {/* Photo side */}
           <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end">
-            {/* Branded glow — sibling, not inside overflow-hidden */}
-            <div
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full pointer-events-none"
-              style={{
-                background:
-                  "radial-gradient(ellipse at center, rgba(1,240,16,0.18) 0%, rgba(1,240,16,0.06) 45%, transparent 75%)",
-                filter: "blur(48px)",
-              }}
-              aria-hidden="true"
-            />
-            <div
-              className="relative w-72 sm:w-80 lg:w-96 aspect-[3/4] rounded-3xl overflow-hidden"
-              style={{
-                boxShadow:
-                  "0 24px 64px rgba(1,240,16,0.08), 0 8px 32px rgba(0,0,0,0.10)",
-              }}
-            >
+            <div className="relative w-72 sm:w-80 lg:w-96 aspect-[3/4]">
               <Image
                 src="/images/mali-photo.png"
-                alt="Malachi, founder of MaliWorks lawn care"
+                alt="Malachi, founder of MaliWorks"
                 fill
-                className="object-cover object-top"
+                className="object-contain object-top"
                 priority
                 sizes="(max-width: 640px) 288px, (max-width: 1024px) 320px, 384px"
               />

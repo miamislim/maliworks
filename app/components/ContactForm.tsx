@@ -81,7 +81,7 @@ export default function ContactForm() {
 
   if (formState === "success") {
     return (
-      <section id="contact" className="py-24 lg:py-32 bg-white">
+      <section id="contact" className="py-24 lg:py-32 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <div className="bg-white border border-green-100 shadow-sm rounded-3xl p-12">
             <CheckCircle2 size={52} className="text-green-600 mx-auto mb-6" />
@@ -102,7 +102,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-white">
+    <section id="contact" className="py-24 lg:py-32 bg-gray-50">
       <div ref={ref} className="max-w-3xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
