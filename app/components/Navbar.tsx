@@ -8,10 +8,12 @@ const PHONE_DISPLAY = "(757) 777-6058";
 const PHONE_HREF = "tel:+17577776058";
 
 const navLinks = [
+  { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },
-  { label: "Request Quote", href: "#contact" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -29,11 +31,13 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass border-b border-brand-border py-3" : "bg-transparent py-5"
+        scrolled
+          ? "bg-brand-dark/95 backdrop-blur-sm border-b border-white/10 py-3"
+          : "bg-brand-dark py-5"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2 shrink-0">
+        <a href="#home" className="flex items-center gap-2 shrink-0">
           <Image
             src="/images/maliworks-logo.png"
             alt="MaliWorks logo"
@@ -74,7 +78,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden text-white p-2 rounded-lg hover:bg-brand-surface transition-colors"
+          className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
@@ -84,7 +88,7 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden glass border-t border-brand-border px-4 py-6 space-y-4 animate-fade-in">
+        <div className="md:hidden bg-brand-dark border-t border-white/10 px-4 py-6 space-y-4 animate-fade-in">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -95,7 +99,7 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="pt-4 border-t border-brand-border space-y-3">
+          <div className="pt-4 border-t border-white/10 space-y-3">
             <a
               href={PHONE_HREF}
               className="flex items-center gap-2 text-sm text-gray-300 hover:text-brand-green transition-colors"

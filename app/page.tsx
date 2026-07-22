@@ -1,37 +1,30 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import FeaturedServices from "./components/FeaturedServices";
 import About from "./components/About";
 import Services from "./components/Services";
-import ContactForm from "./components/ContactForm";
+import WhyChoose from "./components/WhyChoose";
 import Reviews from "./components/Reviews";
-import Payment from "./components/Payment";
-import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
+import CTASection from "./components/CTASection";
 
-// Gallery is intentionally hidden until before/after photos are ready.
-// Restore by uncommenting the import and <Gallery /> below.
-// import Gallery from "./components/Gallery";
+// Gallery is hidden until before/after photos are ready.
+// Restore: import Gallery from "./components/Gallery"; + <Gallery /> after <About />
 
-// WhyChoose and FAQ have been removed in this revision.
+// Payment (Cash App) and Footer are preserved in their files — re-add when needed.
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-white">
       <Navbar />
       <Hero />
-
-      <div className="section-divider" aria-hidden="true" />
-
-      <Services />
+      <FeaturedServices />
       <About />
-
-      <div className="section-divider" aria-hidden="true" />
-
-      {/* <Gallery /> */}
-
-      <ContactForm />
+      <Services />
+      <WhyChoose />
       <Reviews />
-      <Payment />
-      <Footer />
+      <ContactForm />
+      <CTASection />
     </main>
   );
 }

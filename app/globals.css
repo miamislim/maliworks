@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background-color: #0D0D0D;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #111111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,10 +23,10 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #111111;
+  background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: #d1d5db;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -77,7 +77,7 @@ body {
 
 /* Form input overrides */
 input, textarea, select {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 /* Checkbox accent */
